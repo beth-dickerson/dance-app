@@ -5,10 +5,24 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+
+    <div class="view hm-black-strong">
+        <div class="full-bg-img flex-center">
+            <ul>
+                <li>
+                    <h1 class="h1-responsive wow fadeInDown splash"><i class="fa fa-2x fa-bolt" aria-hidden="true"></i> s h i m m y </h1>
+                </li>
+                <li>
+                    <p class="wow fadeInDown splash" data-wow-delay="0.2s">let's dance, philly</p>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <% flash.each do |key, value| %>
       <%= value %>

@@ -1,0 +1,23 @@
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+.view {
+    background: url("http://image.payloadz.com/products/2157319.png")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    http://img1.wikia.nocookie.net/__cb20120518190144/simpsons/images/e/ee/Bart_links_up_megaphones.PNG
+}
+
+.flex-center {
+    color: #fff;
+}
+
+.splash {
+font-family: 'Poppins', 'Ubuntu', 'PT Sans', sans-serif;
+}
