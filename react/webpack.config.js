@@ -16,9 +16,7 @@ var config = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        options :  {
-          presets  :  [ 'es2015', 'stage-2' ] // stage-2 if required
-        }
+        
       }
     ]
   },
