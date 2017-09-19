@@ -29,17 +29,19 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.6.1'
   gem 'pry-rails'
   gem 'shoulda', require: false
+  gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
   gem 'dotenv-rails'
-
 end
 
 group :test do
   gem 'launchy', require: false
+  gem "database_cleaner"
 end
 
 group :production do
