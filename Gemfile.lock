@@ -57,6 +57,7 @@ GEM
       xpath (~> 2.0)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
+    database_cleaner (1.6.1)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -233,8 +234,10 @@ DEPENDENCIES
   activemerchant
   activesupport (~> 5.1.2)
   capybara
+  database_cleaner
   devise
   dotenv-rails
+  factory_girl
   factory_girl_rails
   faker
   foundation-rails
@@ -250,6 +253,7 @@ DEPENDENCIES
   rspec-rails (~> 3.6.1)
   sass-rails (~> 5.0.6)
   shoulda
+  shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets (= 3.7.1)

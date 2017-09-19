@@ -5,13 +5,23 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    
+
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
 
-    <div class="view hm-black-strong">
+    <nav>
+      <ul>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sign Out', '#' %></li>
+        <% else %>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <!-- <div class="view hm-black-strong">
         <div class="full-bg-img flex-center">
             <ul>
                 <li>
@@ -22,7 +32,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <% flash.each do |key, value| %>
       <%= value %>
