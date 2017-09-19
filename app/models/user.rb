@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_many :ratings
+  has_many :venues
+  has_many :categories, through: :venue_categories
+
   validates_presence_of :first_name
   validates_presence_of :last_name
   validates :email, presence: true, uniqueness: true
