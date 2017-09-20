@@ -20,6 +20,8 @@ gem 'devise'
 
 # add webpack support for react
 gem 'webpacker', '~> 3.0'
+# add webpacker-react to access rails through props
+gem 'webpacker-react', "~> 0.3.2"
 
 group :development do
   gem 'listen', '~> 3.1.5'

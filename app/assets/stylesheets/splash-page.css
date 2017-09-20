@@ -1,9 +1,11 @@
 html,
 body,
+
 header,
 .view {
     height: 100%;
 }
+/*http://weknowyourdreams.com/images/dance/dance-02.jpg*/
 
 .view {
     background: url("http://image.payloadz.com/products/2157319.png")no-repeat center center fixed;
@@ -18,5 +20,9 @@ header,
 }
 
 .splash {
-font-family: 'Poppins', 'Ubuntu', 'PT Sans', sans-serif;
+font-family: 'Poppins', 'Ubuntu', 'PT Sans', 'Roboto', sans-serif;
+}
+
+main {
+  background-color: #9C6386;
 }
