@@ -22,7 +22,8 @@ header,
 .splash {
 font-family: 'Poppins', 'Ubuntu', 'PT Sans', 'Roboto', sans-serif;
 }
-
+/*#9C6386*/
 main {
-  background-color: #9C6386;
+  background-color: #FBA404;
+  margin-bottom: -20px;
 }

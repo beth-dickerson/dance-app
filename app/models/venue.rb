@@ -8,7 +8,7 @@ class Venue < ApplicationRecord
   validates :description, presence: true, length: { minimum: 10 }
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, allow_nil: true
   validates :neighborhood, presence: true
-  validates :phone_number, presence: true, format:
+  validates :phone, presence: true, format:
     { with: /\A[\w]{3}-[\w]{3}-[\w]{4}\z/ }
   validates :url, presence: true
   validates :photo, presence: true

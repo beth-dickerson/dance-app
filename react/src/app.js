@@ -1,4 +1,5 @@
 import React from 'react';
+import { Router, browserHistory, Route, IndexRoute } from 'react-router';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -11,8 +12,8 @@ import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import CircularProgress from 'material-ui/CircularProgress';
 import AutoComplete from 'material-ui/AutoComplete';
-import DeepDownTheTree from './DeepDownTheTree';
-
+import ShimmyIndexContainer from './containers/shimmyIndexContainer';
+import ShimmyShowContainer from './containers/shimmyShowContainer';
 
 
 class App extends React.Component {
@@ -27,7 +28,13 @@ class App extends React.Component {
 
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <DeepDownTheTree />
+        <Router history={browserHistory}>
+          <Route path='/' >
+            <IndexRoute component={ShimmyIndexContainer} />
+            <Route path="/venues" component={ShimmyIndexContainer}/>
+            <Route path="/venues/:id" component={ShimmyShowContainer}/>
+          </Route>
+        </Router>
       </MuiThemeProvider>
     );
   }
