@@ -20,7 +20,8 @@ gem 'devise'
 gem 'carrierwave', '~> 1.0'
 gem 'foreman'
 gem 'mini_magick', '3.8.0'
-gem "fog-aws"
+gem 'fog-aws'
+gem 'httparty'
 
 # add webpack support for react
 gem 'webpacker', '~> 3.0'

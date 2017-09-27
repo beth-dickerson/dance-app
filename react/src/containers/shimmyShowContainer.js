@@ -1,7 +1,8 @@
 import React from 'react';
 import Venue from '../components/venues';
+import VenuesContainer from './VenuesContainer';
 
-class VenueShowContainer extends React.Component {
+class ShimmyShowContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,20 +34,18 @@ class VenueShowContainer extends React.Component {
     return(
       <div>
         <p>hello from show page!</p>
+        <VenuesContainer />
         <Venue
           key={this.state.venue.id}
           id={this.state.venue.id}
-          photo={this.state.venue.photo}
           name={this.state.venue.name}
-          description={this.state.venue.description}
-          email={this.state.venue.email}
-          neighborhood={this.state.venue.neighborhood}
-          phone={this.state.venue.phone}
-          url={this.state.venue.url}
+          address={this.state.venue.address}
+
         />
+        <iframe width="550" height="473" frameBorder="0" src={`https://www.google.com/maps/embed/v1/search?q=philadelphia%20dancing%20club&key=AIzaSyB5KSiNWNW318XVycsRXfNYFjZNyz4IOa0`} allowFullScreen></iframe>
       </div>
     );
   }
 }
 
-export default VenueShowContainer;
+export default ShimmyShowContainer;

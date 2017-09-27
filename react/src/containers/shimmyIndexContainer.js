@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import Venue from '../components/venues';
 import { Link } from 'react-router';
+import update from 'immutability-helper';
+import axios from 'axios';
+import ShimmyShowContainer from './shimmyShowContainer';
 
 
 class ShimmyIndexContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      venues: []
+      venues: [],
+      fields: {}
     }
   }
 
+  onChange = updatedValue => {
+    this.setState({
+      fields: {
+        ...this.state.fields,
+        ...updatedValue
+      }
+    })
+  }
+
   componentDidMount() {
-    fetch('/api/v1/venues')
+    fetch('/api/v1/places')
     .then(response => {
       if (response.ok) {
         return response.json();
@@ -23,8 +36,9 @@ class ShimmyIndexContainer extends Component {
       }
     })
     .then(body => {
+
       this.setState({
-        venues: body
+        venues: body.results
       })
     } )
     .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -32,23 +46,28 @@ class ShimmyIndexContainer extends Component {
   }
 
   render() {
-    let venueComponent =
+
+    let placeComponent =
       this.state.venues.map((venue) => {
+
         return(
-          <Link to={`/venues/${venue.id}`} key={venue.id}>
+          <div>
             <Venue
               key={venue.id}
               id={venue.id}
               name={venue.name}
+
             />
-          </Link>
+          </div>
         )
       })
 
     return (
       <div>
         <h1>hello from index page</h1>
-        {venueComponent}
+        {placeComponent}
+        <iframe width="550" height="473" frameBorder="0" src={`https://www.google.com/maps/embed/v1/search?q=philadelphia%20dancing%20club&key=AIzaSyB5KSiNWNW318XVycsRXfNYFjZNyz4IOa0`} allowFullScreen></iframe>
+
       </div>
     );
   }

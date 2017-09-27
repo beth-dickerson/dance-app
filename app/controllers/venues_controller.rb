@@ -12,6 +12,7 @@ class VenuesController < ApplicationController
     @user_id = 0
     if user_signed_in?
       @user_id = current_user.id
+    end
   end
 
   def new

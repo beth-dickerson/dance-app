@@ -12,15 +12,19 @@ import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import CircularProgress from 'material-ui/CircularProgress';
 import AutoComplete from 'material-ui/AutoComplete';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
 import ShimmyIndexContainer from './containers/shimmyIndexContainer';
 import ShimmyShowContainer from './containers/shimmyShowContainer';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      open: true
     }
   }
 
@@ -32,7 +36,7 @@ class App extends React.Component {
           <Route path='/' >
             <IndexRoute component={ShimmyIndexContainer} />
             <Route path="/venues" component={ShimmyIndexContainer}/>
-            <Route path="/venues/:id" component={ShimmyShowContainer}/>
+            <Route path="/places" component={ShimmyShowContainer}/>
           </Route>
         </Router>
       </MuiThemeProvider>
