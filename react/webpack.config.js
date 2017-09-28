@@ -4,7 +4,7 @@ var config = {
   },
   output: {
         path: __dirname + '/../app/assets/javascripts',
-    filename: 'bundle.js'
+    filename: 'application.js'
   },
   module: {
     loaders: [
@@ -14,9 +14,8 @@ var config = {
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
         exclude: /node_modules/,
-
+        loader: 'babel-loader'
       }
     ]
   },
