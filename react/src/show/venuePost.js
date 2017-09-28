@@ -22,7 +22,7 @@ class VenuePost extends Component {
   }
 
   axios.put(
-    `http://localhost:3001/api/v1/venues/${this.props.venue.id}`,
+    `/api/v1/venues/${this.props.venue.id}`,
     {
       venue: venue
     })

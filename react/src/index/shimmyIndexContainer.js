@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Venue from '../components/venues';
+import Venue from './venue';
+import VenueForm from '../index/venueForm';
 import { Link } from 'react-router';
 import update from 'immutability-helper';
 import axios from 'axios';
-import ShimmyShowContainer from './shimmyShowContainer';
+// import ShimmyShowContainer from './shimmyShowContainer';
 
 
 class ShimmyIndexContainer extends Component {
@@ -67,7 +68,7 @@ class ShimmyIndexContainer extends Component {
         <h1>hello from index page</h1>
         {placeComponent}
         <iframe width="550" height="473" frameBorder="0" src={`https://www.google.com/maps/embed/v1/search?q=philadelphia%20dancing%20club&key=AIzaSyB5KSiNWNW318XVycsRXfNYFjZNyz4IOa0`} allowFullScreen></iframe>
-
+        <VenueForm />
       </div>
     );
   }

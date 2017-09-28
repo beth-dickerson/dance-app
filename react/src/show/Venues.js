@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-class Venue extends Component {
+class Venues extends Component {
 
   handleClick = () => {
-    this.props.onClick(this.props.venue.id)
+    this.props.onClick(this.props.id)
   }
 
   handleDelete = () => {
-    this.props.onDelete(this.props.venue.id)
+    this.props.onDelete(this.props.id)
   }
 
   render () {
-    debugger
+    
     return (
       <div className="tile">
         <span className="deleteButton"  onClick={this.handleDelete}>
@@ -28,4 +28,4 @@ class Venue extends Component {
   }
 }
 
-export default Venue;
+export default Venues;

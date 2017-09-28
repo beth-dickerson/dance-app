@@ -1,5 +1,7 @@
 import React from 'react';
-import Venue from '../components/venues';
+import update from 'immutability-helper';
+import axios from 'axios';
+import Venue from './Venues';
 import VenuesContainer from './VenuesContainer';
 
 class ShimmyShowContainer extends React.Component {

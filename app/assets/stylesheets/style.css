@@ -6,9 +6,9 @@ header,
     height: 100%;
 }
 /*http://weknowyourdreams.com/images/dance/dance-02.jpg*/
-
+/*"https://image.ibb.co/d0uYTk/dots_stripes.jpg""http://image.payloadz.com/products/2157319.png"*/
 .view {
-    background: url("http://image.payloadz.com/products/2157319.png")no-repeat center center fixed;
+    background: url("https://image.ibb.co/kSf7ok/stripes.png")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -22,8 +22,16 @@ header,
 .splash {
 font-family: 'Poppins', 'Ubuntu', 'PT Sans', 'Roboto', sans-serif;
 }
+
+.signing {
+  float: right;
+}
 /*#9C6386*/
 main {
   background-color: #FBA404;
   margin-bottom: -20px;
+}
+
+footer {
+  text-align: center;
 }

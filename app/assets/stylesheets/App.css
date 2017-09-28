@@ -2,7 +2,12 @@
   text-align: center;
   height: 150px;
   padding: 20px;
-  background-color: #FAFAFA;
+  background-color: #E0F2F1;
+  background: url("https://image.ibb.co/kSf7ok/stripes.png")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .App-intro {
@@ -10,7 +15,12 @@
 }
 
 .backWall {
-  background-color: #FAFAFA;
+  background-color: #E0F2F1;
+  background: url("https://image.ibb.co/kSf7ok/stripes.png")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .tile {

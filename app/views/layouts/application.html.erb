@@ -44,14 +44,14 @@
       <nav>
         <ul>
           <% if user_signed_in? %>
-            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-            <li><%= link_to 'Edit', edit_user_registration_path %></li>
+            <li class="signing"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+            <li class="signing"><%= link_to 'Edit', edit_user_registration_path %></li>
             <% if current_user.admin? %>
-              <li><%= link_to "Admin Section", admin_path %></li>
+              <li class="signing"><%= link_to "Admin Section", admin_path %></li>
             <% end %>
           <% else %>
-            <li><%= link_to 'Sign In', new_user_session_path %></li>
-            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+            <li class="signing"><%= link_to 'Sign In', new_user_session_path %></li>
+            <li class="signing"><%= link_to 'Sign Up', new_user_registration_path %></li>
           <% end %>
         </ul>
       </nav>
@@ -73,15 +73,6 @@
     </div>
     <!--/.Mask-->
   </header>
-
-  <main>
-
-    <% flash.each do |key, value| %>
-      <%= value %>
-    <% end %>
-
-    <%= yield %>
-  </main>
 
   <!--Footer-->
   <footer class="page-footer black center-on-small-only">
@@ -106,6 +97,10 @@
                   <i class="fa fa-square-o fa-stack-2x" aria-hidden="true"></i>
                   <i class="fa fa-linkedin-square fa-stack-1x" aria-hidden="true"></i>
                 </span><a href="#!">beth-dickerson</a></li>
+            <li><span class="fa-stack fa-lg">
+                  <i class="fa fa-square-o fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fa fa-google fa-stack-1x" aria-hidden="true"></i>
+                </span><a href="#!">bethdickerson17</a></li>
             <!-- <li><a href="#!">Link 3</a></li>
             <li><a href="#!">Link 4</a></li> -->
           </ul>
@@ -116,6 +111,15 @@
     <!--/.Footer Links-->
 
   </footer>
+
+  <main>
+
+    <% flash.each do |key, value| %>
+      <%= value %>
+    <% end %>
+
+    <%= yield %>
+  </main>
 
   </body>
 </html>

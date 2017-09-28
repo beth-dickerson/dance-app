@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Venue from '../components/venues';
-// import VenueForm from '../components/venueForm';
+import Venues from './Venues';
 import update from 'immutability-helper';
 import axios from 'axios';
-import VenuePost from './venuePost';
+import venuePost from './venuePost';
 
 class VenuesContainer extends Component {
   constructor(props) {
@@ -16,7 +15,7 @@ class VenuesContainer extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/api/v1/venues.json')
+    axios.get('/api/v1/venues.json')
       .then(response => {
       console.log(response)
       this.setState({venues: response.data})
@@ -25,8 +24,7 @@ class VenuesContainer extends Component {
   }
 
   addNewVenue = () => {
-    axios.post(
-      'http://localhost:3001/api/v1/venues',
+    axios.post('/api/v1/venues',
       { venue:
         {
           name: '',
@@ -66,7 +64,7 @@ class VenuesContainer extends Component {
   }
 
   deleteVenue = (id) => {
-    axios.delete(`http://localhost:3001/api/v1/venues/${id}`)
+    axios.delete(`/api/v1/venues/${id}`)
     .then(response => {
       const venueIndex = this.state.venues.findIndex(x => x.id === id)
       const venues = update(this.state.venues, { $splice: [[venueIndex, 1]]})
@@ -77,7 +75,7 @@ class VenuesContainer extends Component {
 
   render() {
     return(
-      <div>
+      <div className= "view">
 
       <button className="newVenueButton"
         onClick={this.addNewVenue} >
@@ -97,7 +95,7 @@ class VenuesContainer extends Component {
               resetNotification={this.resetNotification} />)
         } else {
           return(
-            <Venue
+            <Venues
               venue={venue}
               key={venue.id}
               onClick={this.enableEditing}
@@ -105,6 +103,7 @@ class VenuesContainer extends Component {
             />)
         }
       })}
+      <iframe width="550" height="473" frameBorder="0" src={`https://www.google.com/maps/embed/v1/search?q=philadelphia%20dancing%20club&key=AIzaSyB5KSiNWNW318XVycsRXfNYFjZNyz4IOa0`} allowFullScreen></iframe>
       </div>
     );
   }
