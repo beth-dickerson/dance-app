@@ -5,9 +5,9 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 // import ShimmyShowContainer from './show/shimmyShowContainer';
 import VenuesContainer from './show/VenuesContainer';
-import Home from './views/Home';
-import Users from './views/Users';
-import Venues from './views/Venues';
+// import Home from './views/Home';
+// import Users from './views/Users';
+// import Venues from './views/Venues';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
